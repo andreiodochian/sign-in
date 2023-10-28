@@ -1,0 +1,388 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+html{
+    font-size: 16px;
+}
+
+body{
+    background-image: url('https://images.unsplash.com/photo-1690046793146-dd1cc08ea17d?auto=format&fit=crop&q=80&w=2670&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#sign-in-container{
+    width: 100vh; 
+    height: 100vh;
+    font-size: 1.3em;
+    font-family: 'Comfortaa', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.container-one{
+    background-image: url('https://images.unsplash.com/photo-1690046793092-f8d634523264?auto=format&fit=crop&q=80&w=2670&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-position: top;
+    background-size: cover;
+    color: white;
+    width: 100%;
+}
+
+.container-one h1{
+    max-width: 90%;
+    padding: 4rem 0rem 0rem 0rem;
+    margin: auto;
+    font-size: 2em;
+    font-family: 'Ubuntu', sans-serif;
+    letter-spacing: 2px;
+}
+
+.container-one p{
+    font-size: 1rem;
+    width: 70%;
+    padding-bottom: 4rem;
+    line-height: 20px;
+    margin: auto;
+}
+
+.container-two{
+    flex-grow: 1;
+    background-color: white;
+    width: 100%;
+}
+
+.container-two h2{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 2.5em;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    color: #212529;
+}
+
+.container-two p{
+    color: #343a40;
+    width: 80%;
+    margin: auto;
+    font-size: 0.8em;
+    padding-bottom: 1rem;
+    line-height: 20px;
+}
+
+.container-two a{
+    color: #00b4d8;
+    text-decoration: none;
+}
+
+.container-two a:active{
+    color: red;
+}
+
+#inputs{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 90%;
+    margin: 0 auto;
+    color: #343a40;
+}
+
+#inputs .username, .password{
+    border: none;
+    border-bottom: 1.3px solid #343a40;
+    width: 90%;
+    font-size: 2em;
+    margin: 1.5rem auto 1.5rem auto;
+    transition: box-shadow 0.3s;
+}
+
+#inputs .username, .password:focus{
+    outline: none;
+}
+
+#inputs .password{
+    margin-bottom: 1rem;
+}
+
+#inputs .username, .password::placeholder{
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 2rem;
+}
+
+#inputs .checked{
+    margin-left: 1rem;
+    align-self: flex-start;
+    transition: box-shadow 0.3s;
+}
+
+form button{
+    background-color: #00b4d8;
+    font-size: 2rem;
+    padding: 0.8rem 2rem;
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+    border-radius: 20px;
+    border: none;
+    margin-top: 4rem;
+    transition: background-color 0.4s, transform 0.2s ease-in, box-shadow 0.5s;
+}
+
+@media (min-width: 481px) and (max-width: 768px){
+    #sign-in-container h1{
+        font-size: 2.8em;
+        width: 500px;
+    }
+    .container-one p{
+        font-size: 1.3em;
+        width: 430px;
+        line-height: 1em;
+    }
+    .container-two p{
+        font-size: 1em;
+        width: 450px;
+    }
+    #inputs .checked{
+        margin-left: 2rem;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px){
+    body{
+        height: 100vh;
+    }
+    #sign-in-container{
+        display: flex;
+        flex-direction: row;
+        border: 2px solid red;
+        height: 100%;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    #sign-in-container .container-one{
+        height: 100%;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 1;
+    }
+    .container-one h1{
+        padding: 0;
+        margin: 0;
+        font-size: 2.1em;
+        width: 400px;
+        margin-bottom: 0.5rem;
+    }
+    .container-one p{
+        padding: 0;
+        margin: 0;
+        width: 300px;
+        font-size: 1.1em;
+        line-height: 35px;
+    }
+    #sign-in-container .container-two{
+        height: 100%;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-self: center;
+    }
+    .container-two p{
+        max-width: 340px;
+        font-size: 0.9em;
+        line-height: 30px;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1279px){
+    body{
+        height: 100vh;
+    }
+    #sign-in-container{
+        display: flex;
+        flex-direction: row;
+        border: 2px solid red;
+        height: 100%;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    #sign-in-container .container-one{
+        height: 100%;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 1;
+    }
+    .container-one h1{
+        padding: 0;
+        margin: 0;
+        font-size: 2.8em;
+        width: 600px;
+        margin-bottom: 0.5rem;
+    }
+    .container-one p{
+        padding: 0;
+        margin: 0;
+        width: 400px;
+        font-size: 1.1em;
+        line-height: 35px;
+    }
+    #sign-in-container .container-two{
+        height: 100%;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-self: center;
+    }
+    .container-two p{
+        max-width: 400px;
+        font-size: 0.9em;
+        line-height: 30px;
+    }
+    #inputs .remember{
+        margin-left: 0.8rem;
+    }
+}
+
+@media (min-width: 1280px){
+    body{
+        height: 100vh;
+    }
+    #sign-in-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        height: 80%;
+        border-radius: 30px;
+        overflow: hidden;
+    }
+
+    #sign-in-container .container-one{
+        height: 100%;
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 1;
+        max-width: 50%;
+    }
+
+    .container-one h1{
+        margin: 0.3rem;
+        padding: 0;
+        font-size: 2.9em;
+        width: 550px;
+    }
+
+    .container-one p{
+        margin: 0;
+        padding: 0;
+        font-size: 1.3em;
+        line-height: 2rem;
+        width: 450px;
+    }
+    #sign-in-container .container-two{
+        height: 100%;
+        width: 80%;
+        flex-grow: 2;
+    }
+    #inputs .username, .password::placeholder{
+        font-size: 1.5rem;
+    }
+    .container-two a:hover{
+        color: red;
+    }
+    
+    .container-two a:active{
+        color: blue;
+    }
+
+    #inputs .username:focus, .password:focus{
+        box-shadow: 0px 5px 5px #90e0ef;
+    }
+
+    #inputs .remember{
+        margin-left: 0.6rem;
+    }
+
+    #inputs .checked:focus{
+        box-shadow: 0px 3px 5px #90e0ef;
+    }
+    
+    form button:hover{
+        background-color: #0077b6;
+        cursor: pointer;
+        transform: scale(1.1);
+        box-shadow: 0px 4px 3px #90e0ef;
+    }
+
+    form button:active{
+        transform: scale(1);
+        box-shadow: none;
+    }
+}
